@@ -6,6 +6,25 @@
 ## 과제 제출 과정
 * [과제 제출 방법](https://github.com/next-step/nextstep-docs/tree/master/precourse)
 
+## 프로그래밍 요구 사항
+
++ 자바 코드 컨벤션을 지키면서 프로그래밍한다.
+  + https://naver.github.io/hackday-conventions-java/
++ indent(인덴트, 들여쓰기) depth를 2가 넘지 않도록 구현한다. 1까지만 허용한다. 
+  + 예를 들어 while문 안에 if문이 있으면 들여쓰기는 2이다.
+  + 힌트: indent(인덴트, 들여쓰기) depth를 줄이는 좋은 방법은 함수(또는 메소드)를 분리하면 된다.
++ 자바 8에 추가된 stream api를 사용하지 않고 구현해야 한다. 단, 람다는 사용 가능하다. else 예약어를 쓰지 않는다.
+  + 힌트: if 조건절에서 값을 return하는 방식으로 구현하면 else를 사용하지 않아도 된다.
+  + else를 쓰지 말라고 하니 switch/case로 구현하는 경우가 있는데 switch/case도 허용하지 않는다.
++ 함수(또는 메소드)의 길이가 10라인을 넘어가지 않도록 구현한다.
+  + 함수(또는 메소드)가 한 가지 일만 잘 하도록 구현한다.
+
+#### 2 주차 추가 요구 사항
++ 일급콜렉션을 활용해 구현한다.
+  + 참고문서: https://developerfarm.wordpress.com/2012/02/01/object_calisthenics_/
++ 모든 원시값과 문자열을 포장한다.
+  + 참고문서: https://developerfarm.wordpress.com/2012/01/27/object_calisthenics_4
+
 ## 기능 요구사항
 + 주어진 횟수 동안 n대의 자동차는 전진 또는 멈출 수 있다.
 + 각 자동차에 이름을 부여할 수 있다. 전진하는 자동찰를 출력할 때 자동차 이름을 같이 출력한다.
@@ -15,22 +34,24 @@
 + 자동차 경주 게임을 완료한 후 누가 우승했는지 알려준다. 우승잔느 한명 이상일 수 있다.
 
 ## 프로그램 실행 결과 
-경주할 자동차 이름을 입력하세요. (이름은 쉼표(,) 기준으로 구분)
-pobi,crong,honux
-시도할 횟수는 몇회인가요?
+경주할 자동차 이름을 입력하세요. (이름은 쉼표(,) 기준으로 구분)  
+pobi,crong,honux  
+시도할 횟수는 몇회인가요?  
 3
 
-실행 결과
-pobi : -
-crong : -
-honux : -
+실행 결과  
+pobi : -  
+crong : -  
+honux : -  
 
-pobi : --
-crong : -
-honux : --
+pobi : --  
+crong : -  
+honux : --  
 
-pobi : ---
-crong : --
-honux : ---
+pobi : ---  
+crong : --  
+honux : ---  
 
 pobi, honux가 최종 우승했습니다.
+
+
