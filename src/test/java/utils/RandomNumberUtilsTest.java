@@ -15,7 +15,7 @@ public class RandomNumberUtilsTest {
     @Test
     @DisplayName("랜덤 숫자 생성")
     public void 난수를_생성한다(){
-        max = 2;
+        max = 3;
         min = 3;
         number = RandomNumberUtils.createRandomNumber(max, min);
         assertTrue(number == max || number == min);
