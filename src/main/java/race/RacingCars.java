@@ -44,11 +44,25 @@ public class RacingCars {
         }
     }
 
-    public String[] winner(){
+    public RacingCar get(int i){
+        return racingCars.get(i);
+    }
+
+    public int maxDistance(){
+        int maxDistance = 0;
+        int carDistance = 0;
         for(int i=0; i< racingCars.size(); i++){
-            System.out.println(racingCars.get(i).currentMoveDistance());
+            carDistance = racingCars.get(i).currentMoveDistance();
+            maxDistance = compare(maxDistance, carDistance);
         }
-        return new String[]{"",""};
+        return maxDistance;
+    }
+
+    private int compare(int maxDistance, int carDistance){
+        if(maxDistance < carDistance){
+            return carDistance;
+        }
+        return maxDistance;
     }
 
     @Override
