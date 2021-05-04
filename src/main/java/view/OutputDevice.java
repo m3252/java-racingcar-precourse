@@ -1,6 +1,5 @@
 package view;
 
-import jdk.internal.joptsimple.internal.Strings;
 import race.RacingCars;
 
 import java.util.List;

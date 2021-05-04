@@ -1,10 +1,7 @@
 package race;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import race.entity.Distance;
-import view.InputDevice;
 
 import java.util.ArrayList;
 import java.util.List;

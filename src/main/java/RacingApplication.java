@@ -1,5 +1,4 @@
 import race.Racing;
-import view.OutputDevice;
 
 public class RacingApplication {
 
