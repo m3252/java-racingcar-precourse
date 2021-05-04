@@ -24,16 +24,16 @@ public class RacingCarTest {
     @Test
     @DisplayName("레이싱카는 이름과 이동거리를 갖는다.")
     public void 레이싱카는_이름과_이동거리를_갖는다(){
-        assertThat(racer.getCarName()).isEqualTo(new CarName("noah"));
-        assertThat(racer.currentMoveDistance()).isEqualTo(new Distance(0));
+        assertThat(racer.getCarName()).isEqualTo("noah");
+        assertThat(racer.currentMoveDistance()).isEqualTo(0);
     }
 
     @Test
     @DisplayName("레이싱카는 이동할 수 있다.")
     public void 레이싱카는_이동할_수_있다(){
-        assertThat(racer.currentMoveDistance()).isEqualTo(new Distance(0));
+        assertThat(racer.currentMoveDistance()).isEqualTo(0);
         racer.move(4);
-        assertThat(racer.currentMoveDistance()).isEqualTo(new Distance(1));
+        assertThat(racer.currentMoveDistance()).isEqualTo(1);
     }
 
     @Test
@@ -43,7 +43,7 @@ public class RacingCarTest {
         min = 4;
         number = RandomNumberUtils.createRandomNumber(max, min);
         racer.move(number);
-        assertThat(racer.currentMoveDistance()).isEqualTo(new Distance(1));
+        assertThat(racer.currentMoveDistance()).isEqualTo(1);
     }
 
     @Test
@@ -53,6 +53,6 @@ public class RacingCarTest {
         min = 3;
         number = RandomNumberUtils.createRandomNumber(max, min);
         racer.move(number);
-        assertThat(racer.currentMoveDistance()).isEqualTo(new Distance(0));
+        assertThat(racer.currentMoveDistance()).isEqualTo(0);
     }
 }
