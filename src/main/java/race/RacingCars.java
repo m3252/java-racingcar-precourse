@@ -1,16 +1,16 @@
 package race;
 
 
-import race.entity.Cars;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class RacingCars {
 
-    private Cars racingCars = new Cars();
+    private final List<RacingCar> racingCars = new ArrayList<>();
 
     public RacingCars(RacingCar ... car) {
-        for (RacingCar racingCar : car) {
-            this.racingCars.add(racingCar);
-        }
+        this.racingCars.addAll(Arrays.asList(car));
     }
 
     public int size(){
