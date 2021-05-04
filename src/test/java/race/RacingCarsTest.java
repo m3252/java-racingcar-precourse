@@ -27,6 +27,16 @@ public class RacingCarsTest {
     }
 
     @Test
+    @DisplayName("레이싱카 참가 할 수 없다.")
+    public void 레이싱카_이름이_중복이면_오류(){
+        cars.add(new RacingCar("noah"));
+        cars.add(new RacingCar("noah"));
+        assertThatThrownBy(() -> new RacingCars(cars))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("중복 참가는 불가능합니다.");
+    }
+
+    @Test
     @DisplayName("n 대의 레이싱는 100대를 넘을수 없다.")
     public void n_대의_레이싱카_범위가_100를_초과하면_오류(){
         for(int i=0; i<101; i++) {
