@@ -7,20 +7,20 @@ import java.util.Objects;
 
 public class RacingCar {
 
-    private CarName name;
+    private CarName carName;
     private Distance moveDistance;
 
-    public RacingCar(String name) {
-        this.name = new CarName(name);
+    public RacingCar(String carName) {
+        this.carName = new CarName(carName);
         this.moveDistance =  new Distance(0);
     }
 
-    public CarName getCarName() {
-        return name;
+    public String getCarName() {
+        return carName.getCarName();
     }
 
-    public Distance currentMoveDistance() {
-        return moveDistance;
+    public int currentMoveDistance() {
+        return moveDistance.getDistance();
     }
 
     public void move(int randomValue) {
@@ -34,18 +34,18 @@ public class RacingCar {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         RacingCar racingCar = (RacingCar) o;
-        return Objects.equals(name, racingCar.name) && Objects.equals(moveDistance, racingCar.moveDistance);
+        return Objects.equals(carName, racingCar.carName) && Objects.equals(moveDistance, racingCar.moveDistance);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, moveDistance);
+        return Objects.hash(carName, moveDistance);
     }
 
     @Override
     public String toString() {
         return "RacingCar{" +
-                "name=" + name +
+                "name=" + carName +
                 ", moveDistance=" + moveDistance +
                 '}';
     }
